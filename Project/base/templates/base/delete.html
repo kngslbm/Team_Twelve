@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<form method="POST" action="">
+    {% csrf_token %}
+    <p>"{{obj}}" 를 정말 삭제할까요?</p>
+
+    <a href="{{request.META.HTTP_REFERER}}">그냥 둘게요</a>
+    <input type="submit" value="삭제할게요" />
+</form>
+
+{% endblock content %}
